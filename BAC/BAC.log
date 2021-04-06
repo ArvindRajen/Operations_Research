@@ -1,0 +1,305 @@
+ampl: model BAC0.mod;
+ampl: data project2.dat;
+ampl: option solver cplex;
+ampl: solve;
+CPLEX 12.9.0.0: The license for this version of CPLEX will expire in 11.9 days.
+CPLEX solution status 5 with fixed integers:
+	optimal with unscaled infeasibilities
+optimal integer solution within mipgap or absmipgap; objective 14320244.62
+82174 MIP simplex iterations
+671 branch-and-bound nodes
+absmipgap = 1412.17, relmipgap = 9.86132e-05
+ampl: display _solve_elapsed_time;
+_solve_elapsed_time = 14.594
+
+ampl: display fp, fw;
+fp [*] :=
+ 1 0    4 0    7 0   10 0   13 1   16 0   19 1   22 0   25 1
+ 2 0    5 0    8 0   11 0   14 0   17 0   20 0   23 0
+ 3 0    6 0    9 0   12 0   15 0   18 0   21 0   24 1
+;
+
+fw [*,*]
+:    1   2   3   4    :=
+1    0   0   0   0
+2    0   0   0   1
+3    0   0   0   0
+4    0   0   0   0
+5    0   0   0   1
+6    0   0   0   0
+7    0   0   0   0
+8    0   0   0   0
+9    0   0   0   0
+10   0   0   0   0
+11   0   0   0   0
+12   0   0   0   0
+13   0   0   0   0
+14   0   0   0   0
+15   0   0   0   1
+16   0   0   0   0
+17   0   0   0   0
+18   1   1   1   0
+19   0   0   0   0
+20   0   0   0   0
+21   0   0   0   0
+22   1   1   1   0
+23   1   1   1   0
+24   0   0   0   0
+25   0   0   0   0
+;
+
+ampl: reset;
+ampl: model BAC1.mod;
+ampl: data project2.dat;
+ampl: option solver cplex;
+ampl: solve;
+CPLEX 12.9.0.0: The license for this version of CPLEX will expire in 11.9 days.
+CPLEX solution status 5 with fixed integers:
+	optimal with unscaled infeasibilities
+optimal integer solution within mipgap or absmipgap; objective 14700324.98
+92441 MIP simplex iterations
+837 branch-and-bound nodes
+absmipgap = 705.807, relmipgap = 4.8013e-05
+ampl: display _solve_elapsed_time;
+_solve_elapsed_time = 15.407
+
+ampl: display fp, fw;
+fp [*] :=
+ 1 0    4 0    7 0   10 0   13 1   16 0   19 1   22 1   25 1
+ 2 0    5 0    8 0   11 0   14 0   17 0   20 0   23 0
+ 3 0    6 0    9 0   12 0   15 0   18 0   21 0   24 0
+;
+
+fw [*,*]
+:    1   2   3   4    :=
+1    0   0   0   1
+2    0   0   0   0
+3    0   0   0   0
+4    0   0   0   0
+5    0   0   0   0
+6    0   0   0   0
+7    0   0   0   0
+8    0   0   0   0
+9    0   0   0   0
+10   0   0   0   0
+11   0   0   0   0
+12   0   0   0   0
+13   0   0   0   0
+14   0   0   0   0
+15   0   0   0   1
+16   0   0   0   1
+17   0   0   0   0
+18   1   1   1   0
+19   0   0   0   0
+20   0   0   0   0
+21   0   0   0   0
+22   0   0   0   0
+23   1   1   1   0
+24   1   1   1   0
+25   0   0   0   0
+;
+
+ampl: reset;
+ampl: model BAC2.mod;
+ampl: data project2.dat;
+ampl: option solver cplex;
+ampl: solve;
+CPLEX 12.9.0.0: The license for this version of CPLEX will expire in 11.9 days.
+CPLEX solution status 5 with fixed integers:
+	optimal with unscaled infeasibilities
+optimal integer solution; objective 14908288.95
+55081 MIP simplex iterations
+378 branch-and-bound nodes
+ampl: display _solve_elapsed_time;
+_solve_elapsed_time = 15.11
+
+ampl: display fp, fw;
+fp [*] :=
+ 1 0    4 0    7 0   10 0   13 1   16 0   19 1   22 0   25 1
+ 2 0    5 0    8 0   11 0   14 0   17 0   20 1   23 0
+ 3 0    6 0    9 0   12 0   15 0   18 0   21 0   24 0
+;
+
+fw [*,*]
+:    1   2   3   4    :=
+1    0   0   0   0
+2    0   0   0   0
+3    1   1   1   1
+4    0   0   0   0
+5    0   0   0   0
+6    0   0   0   0
+7    0   0   0   0
+8    0   0   0   0
+9    0   0   0   0
+10   0   0   0   0
+11   0   0   0   0
+12   0   0   0   0
+13   0   0   0   0
+14   0   0   0   0
+15   0   0   0   0
+16   0   0   0   1
+17   0   0   0   1
+18   0   0   0   0
+19   0   0   0   0
+20   0   0   0   0
+21   0   0   0   0
+22   0   0   0   0
+23   1   1   1   0
+24   1   1   1   0
+25   0   0   0   0
+;
+
+ampl: reset;
+ampl: model BAC3.mod;
+ampl: data project2.dat;
+ampl: option solver cplex;
+ampl: solve;
+CPLEX 12.9.0.0: The license for this version of CPLEX will expire in 11.9 days.
+CPLEX solution status 5 with fixed integers:
+	optimal with unscaled infeasibilities
+optimal integer solution; objective 15018338.71
+33323 MIP simplex iterations
+264 branch-and-bound nodes
+ampl: display _solve_elapsed_time;
+_solve_elapsed_time = 10.375
+
+ampl: display fp, fw;
+fp [*] :=
+ 1 0    4 0    7 1   10 0   13 1   16 0   19 0   22 0   25 1
+ 2 0    5 0    8 0   11 0   14 0   17 0   20 0   23 0
+ 3 0    6 0    9 1   12 0   15 0   18 0   21 0   24 0
+;
+
+fw [*,*]
+:    1   2   3   4    :=
+1    0   0   0   0
+2    0   0   0   0
+3    0   0   0   0
+4    0   0   0   1
+5    0   0   0   0
+6    0   0   0   0
+7    0   0   0   0
+8    0   0   0   0
+9    0   0   0   0
+10   0   0   0   0
+11   0   0   0   0
+12   0   0   0   0
+13   0   0   0   0
+14   0   0   0   0
+15   0   0   0   0
+16   0   0   0   0
+17   0   0   0   1
+18   0   0   0   0
+19   1   1   1   0
+20   0   0   0   0
+21   0   0   0   1
+22   1   1   1   0
+23   1   1   1   0
+24   0   0   0   0
+25   0   0   0   0
+;
+
+ampl: reset;
+ampl: model BAC4.mod;
+ampl: data project2.dat;
+ampl: option solver cplex;
+ampl: solve;
+CPLEX 12.9.0.0: The license for this version of CPLEX will expire in 11.9 days.
+CPLEX solution status 5 with fixed integers:
+	optimal with unscaled infeasibilities
+optimal integer solution within mipgap or absmipgap; objective 15205421.98
+21110 MIP simplex iterations
+199 branch-and-bound nodes
+absmipgap = 671.979, relmipgap = 4.41934e-05
+ampl: display _solve_elapsed_time;
+_solve_elapsed_time = 8.406
+
+ampl: display fp, fw;
+fp [*] :=
+ 1 0    4 0    7 1   10 0   13 0   16 0   19 0   22 0   25 1
+ 2 0    5 1    8 0   11 0   14 0   17 0   20 0   23 0
+ 3 0    6 0    9 1   12 0   15 0   18 0   21 0   24 0
+;
+
+fw [*,*]
+:    1   2   3   4    :=
+1    0   0   0   0
+2    0   0   0   1
+3    0   0   0   0
+4    0   0   0   0
+5    0   0   0   0
+6    0   0   0   0
+7    0   0   0   0
+8    0   0   0   1
+9    0   0   0   0
+10   0   0   0   1
+11   0   0   0   0
+12   0   0   0   0
+13   0   0   0   0
+14   0   0   0   0
+15   0   0   0   0
+16   0   0   0   0
+17   0   0   0   0
+18   0   0   0   0
+19   1   1   1   0
+20   0   0   0   0
+21   0   0   0   0
+22   1   1   1   0
+23   1   1   1   0
+24   0   0   0   0
+25   0   0   0   0
+;
+
+ampl: reset;
+ampl: model BAC5.mod;
+ampl: data project2.dat;
+ampl: option solver cplex;
+ampl: solve;
+CPLEX 12.9.0.0: The license for this version of CPLEX will expire in 11.9 days.
+CPLEX solution status 5 with fixed integers:
+	optimal with unscaled infeasibilities
+optimal integer solution within mipgap or absmipgap; objective 15264409.31
+23405 MIP simplex iterations
+459 branch-and-bound nodes
+absmipgap = 1442.59, relmipgap = 9.45071e-05
+ampl: display _solve_elapsed_time;
+_solve_elapsed_time = 5.688
+
+ampl: display fp, fw;
+fp [*] :=
+ 1 0    4 0    7 0   10 0   13 0   16 0   19 1   22 0   25 1
+ 2 0    5 1    8 0   11 0   14 0   17 0   20 0   23 0
+ 3 0    6 0    9 1   12 0   15 0   18 0   21 0   24 0
+;
+
+fw [*,*]
+:    1   2   3   4    :=
+1    0   0   0   1
+2    0   0   0   1
+3    0   0   0   0
+4    0   0   0   0
+5    0   0   0   0
+6    0   0   0   0
+7    0   0   0   0
+8    0   0   0   0
+9    0   0   0   0
+10   0   0   0   0
+11   0   0   0   0
+12   0   0   0   0
+13   0   0   0   0
+14   0   0   0   0
+15   0   0   0   0
+16   0   0   0   0
+17   0   0   0   1
+18   1   1   1   0
+19   0   0   0   0
+20   0   0   0   0
+21   0   0   0   0
+22   1   1   1   0
+23   1   1   1   0
+24   0   0   0   0
+25   0   0   0   0
+;
+
+ampl: 
+ampl: 
