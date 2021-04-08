@@ -1,0 +1,493 @@
+ampl: model SWAP1.mod;
+ampl: data project2.dat;
+ampl: option solver cplex;
+ampl: solve;
+CPLEX 12.9.0.0: The license for this version of CPLEX will expire in 11.9 days.
+optimal integer solution; objective 18773738.87
+851 MIP simplex iterations
+0 branch-and-bound nodes
+ampl: display _solve_elapsed_time;
+_solve_elapsed_time = 0.156
+
+ampl: display fp, fw;
+fp [*] :=
+ 1 1    4 1    7 0   10 0   13 1   16 0   19 0   22 0   25 0
+ 2 0    5 0    8 0   11 0   14 0   17 0   20 0   23 0
+ 3 1    6 0    9 0   12 0   15 0   18 0   21 0   24 0
+;
+
+fw [*,*]
+:    1   2   3   4    :=
+1    0   0   0   0
+2    0   0   0   0
+3    0   0   0   0
+4    0   0   0   0
+5    0   0   0   0
+6    0   0   0   0
+7    0   0   0   0
+8    0   0   0   0
+9    0   0   0   0
+10   0   0   0   0
+11   0   0   0   0
+12   0   0   0   0
+13   0   0   0   0
+14   0   0   0   0
+15   0   0   0   0
+16   0   0   0   0
+17   0   0   0   0
+18   0   0   0   0
+19   0   0   0   0
+20   0   0   0   0
+21   0   0   0   0
+22   0   0   0   0
+23   1   1   1   1
+24   1   1   1   1
+25   1   1   1   1
+;
+
+ampl: reset;
+ampl: model SWAP2.mod;
+ampl: data project2.dat;
+ampl: option solver cplex;
+ampl: solve;
+CPLEX 12.9.0.0: The license for this version of CPLEX will expire in 11.9 days.
+optimal integer solution; objective 16570402.56
+751 MIP simplex iterations
+0 branch-and-bound nodes
+ampl: display _solve_elapsed_time;
+_solve_elapsed_time = 0.141
+
+ampl: display fp, fw;
+fp [*] :=
+ 1 0    4 1    7 0   10 0   13 1   16 0   19 0   22 1   25 0
+ 2 0    5 0    8 0   11 0   14 0   17 0   20 0   23 0
+ 3 1    6 0    9 0   12 0   15 0   18 0   21 0   24 0
+;
+
+fw [*,*]
+:    1   2   3   4    :=
+1    0   0   0   0
+2    0   0   0   0
+3    0   0   0   0
+4    0   0   0   0
+5    0   0   0   0
+6    0   0   0   0
+7    0   0   0   0
+8    0   0   0   0
+9    0   0   0   0
+10   0   0   0   0
+11   0   0   0   0
+12   0   0   0   0
+13   0   0   0   0
+14   0   0   0   0
+15   0   0   0   0
+16   0   0   0   0
+17   0   0   0   0
+18   0   0   0   0
+19   0   0   0   0
+20   0   0   0   0
+21   0   0   0   0
+22   0   0   0   0
+23   1   1   1   1
+24   1   1   1   1
+25   1   1   1   1
+;
+
+ampl: reset;
+ampl: model SWAP3.mod;
+ampl: data project2.dat;
+ampl: option solver cplex;
+ampl: solve;
+CPLEX 12.9.0.0: The license for this version of CPLEX will expire in 11.9 days.
+optimal integer solution; objective 15815155.54
+1003 MIP simplex iterations
+0 branch-and-bound nodes
+absmipgap = 3.72529e-09, relmipgap = 2.35552e-16
+ampl: display _solve_elapsed_time;
+_solve_elapsed_time = 0.156
+
+ampl: display fp, fw;
+fp [*] :=
+ 1 0    4 0    7 0   10 0   13 1   16 0   19 1   22 1   25 0
+ 2 0    5 0    8 0   11 0   14 0   17 0   20 0   23 0
+ 3 1    6 0    9 0   12 0   15 0   18 0   21 0   24 0
+;
+
+fw [*,*]
+:    1   2   3   4    :=
+1    0   0   0   0
+2    0   0   0   0
+3    0   0   0   0
+4    0   0   0   0
+5    0   0   0   0
+6    0   0   0   0
+7    0   0   0   0
+8    0   0   0   0
+9    0   0   0   0
+10   0   0   0   0
+11   0   0   0   0
+12   0   0   0   0
+13   0   0   0   0
+14   0   0   0   0
+15   0   0   0   0
+16   0   0   0   0
+17   0   0   0   0
+18   0   0   0   0
+19   0   0   0   0
+20   0   0   0   0
+21   0   0   0   0
+22   0   0   0   0
+23   1   1   1   1
+24   1   1   1   1
+25   1   1   1   1
+;
+
+ampl: reset;
+ampl: model SWAP4.mod;
+ampl: data project2.dat;
+ampl: option solver cplex;
+ampl: solve;
+CPLEX 12.9.0.0: The license for this version of CPLEX will expire in 11.9 days.
+optimal integer solution within mipgap or absmipgap; objective 16002484.5
+993 MIP simplex iterations
+0 branch-and-bound nodes
+absmipgap = 864.054, relmipgap = 5.3995e-05
+ampl: display _solve_elapsed_time;
+_solve_elapsed_time = 0.141
+
+ampl: display fp, fw;
+fp [*] :=
+ 1 0    4 0    7 0   10 0   13 0   16 0   19 1   22 1   25 0
+ 2 0    5 1    8 0   11 0   14 0   17 0   20 0   23 0
+ 3 1    6 0    9 0   12 0   15 0   18 0   21 0   24 0
+;
+
+fw [*,*]
+:    1   2   3   4    :=
+1    0   0   0   0
+2    0   0   0   0
+3    0   0   0   0
+4    0   0   0   0
+5    0   0   0   0
+6    0   0   0   0
+7    0   0   0   0
+8    0   0   0   0
+9    0   0   0   0
+10   0   0   0   0
+11   0   0   0   0
+12   0   0   0   0
+13   0   0   0   0
+14   0   0   0   0
+15   0   0   0   0
+16   0   0   0   0
+17   0   0   0   0
+18   0   0   0   0
+19   0   0   0   0
+20   0   0   0   0
+21   0   0   0   0
+22   0   0   0   0
+23   1   1   1   1
+24   1   1   1   1
+25   1   1   1   1
+;
+
+ampl: reset;
+ampl: model SWAP5.mod;
+ampl: data project2.dat;
+ampl: option solver cplex;
+ampl: solve;
+CPLEX 12.9.0.0: The license for this version of CPLEX will expire in 11.9 days.
+optimal integer solution; objective 15736707.59
+221 MIP simplex iterations
+0 branch-and-bound nodes
+ampl: display _solve_elapsed_time;
+_solve_elapsed_time = 0.078
+
+ampl: display fp, fw;
+fp [*] :=
+ 1 0    4 0    7 0   10 0   13 1   16 0   19 1   22 1   25 0
+ 2 0    5 0    8 0   11 0   14 0   17 0   20 0   23 0
+ 3 1    6 0    9 0   12 0   15 0   18 0   21 0   24 0
+;
+
+fw [*,*]
+:    1   2   3   4    :=
+1    0   0   0   0
+2    0   0   0   0
+3    0   0   0   0
+4    0   0   0   0
+5    0   0   0   0
+6    0   0   0   0
+7    0   0   0   0
+8    0   0   0   0
+9    0   0   0   0
+10   0   0   0   0
+11   1   0   0   0
+12   0   0   0   0
+13   0   0   0   0
+14   0   0   0   0
+15   0   0   0   0
+16   0   0   0   0
+17   0   0   0   0
+18   0   0   0   0
+19   0   0   0   0
+20   0   0   0   0
+21   0   0   0   0
+22   0   0   0   0
+23   0   1   1   1
+24   1   1   1   1
+25   1   1   1   1
+;
+
+ampl: reset;
+ampl: model SWAP6.mod;
+ampl: data project2.dat;
+ampl: option solver cplex;
+ampl: solve;
+CPLEX 12.9.0.0: The license for this version of CPLEX will expire in 11.9 days.
+optimal integer solution; objective 15815155.54
+250 MIP simplex iterations
+0 branch-and-bound nodes
+ampl: display _solve_elapsed_time;
+_solve_elapsed_time = 0.078
+
+ampl: display fp, fw;
+fp [*] :=
+ 1 0    4 0    7 0   10 0   13 1   16 0   19 1   22 1   25 0
+ 2 0    5 0    8 0   11 0   14 0   17 0   20 0   23 0
+ 3 1    6 0    9 0   12 0   15 0   18 0   21 0   24 0
+;
+
+fw [*,*]
+:    1   2   3   4    :=
+1    0   0   0   0
+2    0   0   0   0
+3    0   0   0   0
+4    0   0   0   0
+5    0   0   0   0
+6    0   0   0   0
+7    0   0   0   0
+8    0   0   0   0
+9    0   0   0   0
+10   0   0   0   0
+11   0   0   0   0
+12   0   0   0   0
+13   0   0   0   0
+14   0   0   0   0
+15   0   0   0   0
+16   0   0   0   0
+17   0   0   0   0
+18   0   0   0   0
+19   0   0   0   0
+20   0   0   0   0
+21   0   0   0   0
+22   0   0   0   0
+23   1   1   1   1
+24   1   1   1   1
+25   1   1   1   1
+;
+
+ampl: reset;
+ampl: model SWAP7.mod;
+ampl: data project2.dat;
+ampl: option solver cplex;
+ampl: solve;
+CPLEX 12.9.0.0: The license for this version of CPLEX will expire in 11.9 days.
+optimal integer solution; objective 15783956.85
+377 MIP simplex iterations
+0 branch-and-bound nodes
+ampl: display _solve_elapsed_time;
+_solve_elapsed_time = 0.141
+
+ampl: display fp, fw;
+fp [*] :=
+ 1 0    4 0    7 0   10 0   13 1   16 0   19 1   22 1   25 0
+ 2 0    5 0    8 0   11 0   14 0   17 0   20 0   23 0
+ 3 1    6 0    9 0   12 0   15 0   18 0   21 0   24 0
+;
+
+fw [*,*]
+:    1   2   3   4    :=
+1    0   0   0   0
+2    0   0   0   0
+3    0   0   0   0
+4    0   0   0   0
+5    0   0   0   0
+6    0   0   0   0
+7    0   0   0   0
+8    0   0   0   0
+9    0   0   0   0
+10   0   0   0   0
+11   1   1   0   0
+12   0   0   0   0
+13   0   0   0   0
+14   0   0   0   0
+15   0   0   0   0
+16   0   0   0   0
+17   0   0   0   0
+18   0   0   0   0
+19   0   0   0   0
+20   0   0   0   0
+21   0   0   0   0
+22   0   0   0   0
+23   0   0   1   1
+24   1   1   1   1
+25   1   1   1   1
+;
+
+ampl: reset;
+ampl: model SWAP8.mod;
+ampl: data project2.dat;
+ampl: option solver cplex;
+ampl: solve;
+CPLEX 12.9.0.0: The license for this version of CPLEX will expire in 11.9 days.
+optimal integer solution; objective 15881210.62
+386 MIP simplex iterations
+0 branch-and-bound nodes
+absmipgap = 1.86265e-09, relmipgap = 1.17286e-16
+ampl: display _solve_elapsed_time;
+_solve_elapsed_time = 0.125
+
+ampl: display fp, fw;
+fp [*] :=
+ 1 0    4 0    7 0   10 0   13 1   16 0   19 1   22 1   25 0
+ 2 0    5 0    8 0   11 0   14 0   17 0   20 0   23 0
+ 3 1    6 0    9 0   12 0   15 0   18 0   21 0   24 0
+;
+
+fw [*,*]
+:    1   2   3   4    :=
+1    0   0   0   0
+2    0   0   0   0
+3    0   0   0   0
+4    0   0   0   0
+5    0   0   0   0
+6    0   0   0   0
+7    0   0   0   0
+8    0   0   0   0
+9    0   0   0   0
+10   0   0   0   0
+11   1   0   0   0
+12   0   0   0   0
+13   0   0   0   0
+14   0   0   0   0
+15   0   0   0   0
+16   0   0   0   0
+17   0   0   0   0
+18   0   0   0   0
+19   0   0   0   0
+20   0   0   1   0
+21   0   0   0   0
+22   0   0   0   0
+23   0   1   1   1
+24   1   1   0   1
+25   1   1   1   1
+;
+
+ampl: reset;
+ampl: model SWAP9.mod;
+ampl: data project2.dat;
+ampl: option solver cplex;
+ampl: solve;
+CPLEX 12.9.0.0: The license for this version of CPLEX will expire in 11.9 days.
+optimal integer solution; objective 15736707.59
+103 MIP simplex iterations
+0 branch-and-bound nodes
+absmipgap = 1.86265e-09, relmipgap = 1.18363e-16
+ampl: display _solve_elapsed_time;
+_solve_elapsed_time = 0.047
+
+ampl: display fp, fw;
+fp [*] :=
+ 1 0    4 0    7 0   10 0   13 1   16 0   19 1   22 1   25 0
+ 2 0    5 0    8 0   11 0   14 0   17 0   20 0   23 0
+ 3 1    6 0    9 0   12 0   15 0   18 0   21 0   24 0
+;
+
+fw [*,*]
+:    1   2   3   4    :=
+1    0   0   0   1
+2    0   0   0   0
+3    0   0   0   0
+4    0   0   0   0
+5    0   0   0   0
+6    0   0   0   0
+7    0   0   0   0
+8    0   0   0   0
+9    0   0   0   0
+10   0   0   0   0
+11   1   0   0   0
+12   0   0   0   0
+13   0   0   0   0
+14   0   0   0   0
+15   0   0   0   0
+16   0   0   0   0
+17   0   0   0   0
+18   0   0   0   0
+19   0   0   0   0
+20   0   0   0   0
+21   0   0   0   0
+22   0   0   0   0
+23   0   1   1   1
+24   1   1   1   1
+25   1   1   1   0
+;
+
+ampl: display{q in Q} sum{i in CITIES} D[i,q];
+sum{i in CITIES} D[i,q] [*] :=
+1  175723
+2  292872
+3  234298
+4  468596
+;
+
+ampl: display{q in Q} sum{i in CITIES} U[i,q];
+sum{i in CITIES} U[i,q] [*] :=
+1  2108680
+2  2108680
+3  1405790
+4  2249260
+;
+
+ampl: display{q in Q} sum{i in CITIES} xp[i,q];
+sum{i in CITIES} xp[i,q] [*] :=
+1  285395
+2  323704
+3  225939
+4  336451
+;
+
+ampl: display{q in Q} sum{i in CITIES} xw[i,q];
+sum{i in CITIES} xw[i,q] [*] :=
+1  109672
+2  140504
+3  132145
+4       0
+;
+
+ampl: display{q in Q} sum{i in CITIES, j in CITIES} ypi[i,j,q];
+sum{i in CITIES, j in CITIES} ypi[i,j,q] [*] :=
+1  175723
+2  187856
+3  132742
+4  336451
+;
+
+ampl: display{q in Q} sum{i in CITIES, j in CITIES} ypw[i,j,q];
+sum{i in CITIES, j in CITIES} ypw[i,j,q] [*] :=
+1  109672
+2  135847
+3   93196.6
+4       0
+;
+
+ampl: display{q in Q} sum{i in CITIES, j in CITIES} ywi[i,j,q];
+sum{i in CITIES, j in CITIES} ywi[i,j,q] [*] :=
+1       0
+2  105016
+3  101555
+4  132145
+;
+
+ampl: 
+ampl: 

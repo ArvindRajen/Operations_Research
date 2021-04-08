@@ -1,0 +1,402 @@
+ampl: model ADD1.mod;
+ampl: data project2.dat;
+ampl: option solver cplex;
+ampl: solve;
+presolve: constraint fp_yp_relation[2,4] cannot hold:
+	body <= 0 cannot be >= 22459.9; difference = -22459.9
+presolve: constraint Prod_bal[2,4] cannot hold:
+	body >= 0 cannot be <= -22459.9; difference = 22459.9
+presolve: constraint fp_yp_relation[1,3] cannot hold:
+	body <= -59470.8 cannot be >= -57782.6; difference = -1688.22
+presolve: constraint fp_yp_relation[1,3] cannot hold:
+	body <= -65703.2 cannot be >= -57782.6; difference = -7920.62
+presolve: constraint fp_yp_relation[1,3] cannot hold:
+	body <= -72170.6 cannot be >= -57782.6; difference = -14388
+65 presolve messages suppressed.
+ampl: display _solve_elapsed_time;
+_solve_elapsed_time = 0
+
+ampl: display fp, fw;
+fp [*] :=
+ 1 1    4 0    7 0   10 0   13 0   16 0   19 0   22 0   25 0
+ 2 0    5 0    8 0   11 0   14 0   17 0   20 0   23 0
+ 3 0    6 0    9 0   12 0   15 0   18 0   21 0   24 0
+;
+
+fw [*,*]
+:    1   2   3   4    :=
+1    0   0   0   0
+2    0   0   0   0
+3    0   0   0   0
+4    0   0   0   0
+5    0   0   0   0
+6    0   0   0   0
+7    0   0   0   0
+8    0   0   0   0
+9    0   0   0   0
+10   0   0   0   0
+11   0   0   0   0
+12   0   0   0   0
+13   0   0   0   0
+14   0   0   0   0
+15   0   0   0   0
+16   0   0   0   0
+17   0   0   0   0
+18   0   0   0   0
+19   0   0   0   0
+20   0   0   0   0
+21   0   0   0   0
+22   0   0   0   0
+23   0   0   0   0
+24   0   0   0   0
+25   0   0   0   0
+;
+
+ampl: reset;
+ampl: model ADD2.mod;
+ampl: data project2.dat;
+ampl: option solver cplex;
+ampl: solve;
+CPLEX 12.9.0.0: The license for this version of CPLEX will expire in 11.9 days.
+infeasible problem.
+No basis.
+ampl: display _solve_elapsed_time;
+_solve_elapsed_time = 0.109
+
+ampl: display fp, fw;
+fp [*] :=
+ 1 1    4 0    7 0   10 0   13 0   16 0   19 0   22 0   25 0
+ 2 1    5 0    8 0   11 0   14 0   17 0   20 0   23 0
+ 3 0    6 0    9 0   12 0   15 0   18 0   21 0   24 0
+;
+
+fw [*,*]
+:    1   2   3   4    :=
+1    0   0   0   0
+2    0   0   0   0
+3    0   0   0   0
+4    0   0   0   0
+5    0   0   0   0
+6    0   0   0   0
+7    0   0   0   0
+8    0   0   0   0
+9    0   0   0   0
+10   0   0   0   0
+11   0   0   0   0
+12   0   0   0   0
+13   0   0   0   0
+14   0   0   0   0
+15   0   0   0   0
+16   0   0   0   0
+17   0   0   0   0
+18   0   0   0   0
+19   0   0   0   0
+20   0   0   0   0
+21   0   0   0   0
+22   0   0   0   0
+23   0   0   0   0
+24   0   0   0   0
+25   0   0   0   0
+;
+
+ampl: reset;
+ampl: model ADD3.mod;
+ampl: data project2.dat;
+ampl: option solver cplex;
+ampl: solve;
+CPLEX 12.9.0.0: The license for this version of CPLEX will expire in 11.9 days.
+infeasible problem.
+4 dual simplex iterations (0 in phase I)
+constraint.dunbdd returned
+4 extra dual simplex iterations for ray
+
+suffix dunbdd OUT;
+ampl: display _solve_elapsed_time;
+_solve_elapsed_time = 0.078
+
+ampl: display fp, fw;
+fp [*] :=
+ 1 1    4 0    7 0   10 0   13 0   16 0   19 0   22 0   25 0
+ 2 1    5 0    8 0   11 0   14 0   17 0   20 0   23 0
+ 3 1    6 0    9 0   12 0   15 0   18 0   21 0   24 0
+;
+
+fw [*,*]
+:    1   2   3   4    :=
+1    0   0   0   0
+2    0   0   0   0
+3    0   0   0   0
+4    0   0   0   0
+5    0   0   0   0
+6    0   0   0   0
+7    0   0   0   0
+8    0   0   0   0
+9    0   0   0   0
+10   0   0   0   0
+11   0   0   0   0
+12   0   0   0   0
+13   0   0   0   0
+14   0   0   0   0
+15   0   0   0   0
+16   0   0   0   0
+17   0   0   0   0
+18   0   0   0   0
+19   0   0   0   0
+20   0   0   0   0
+21   0   0   0   0
+22   0   0   0   0
+23   0   0   0   0
+24   0   0   0   0
+25   0   0   0   0
+;
+
+ampl: reset;
+ampl: model ADD4.mod;
+ampl: data project2.dat;
+ampl: option solver cplex;
+ampl: solve;
+CPLEX 12.9.0.0: The license for this version of CPLEX will expire in 11.9 days.
+infeasible problem.
+15 dual simplex iterations (0 in phase I)
+constraint.dunbdd returned
+15 extra dual simplex iterations for ray
+
+suffix dunbdd OUT;
+ampl: display _solve_elapsed_time;
+_solve_elapsed_time = 0.032
+
+ampl: display fp, fw;
+fp [*] :=
+ 1 1    4 1    7 0   10 0   13 0   16 0   19 0   22 0   25 0
+ 2 1    5 0    8 0   11 0   14 0   17 0   20 0   23 0
+ 3 1    6 0    9 0   12 0   15 0   18 0   21 0   24 0
+;
+
+fw [*,*]
+:    1   2   3   4    :=
+1    0   0   0   0
+2    0   0   0   0
+3    0   0   0   0
+4    0   0   0   0
+5    0   0   0   0
+6    0   0   0   0
+7    0   0   0   0
+8    0   0   0   0
+9    0   0   0   0
+10   0   0   0   0
+11   0   0   0   0
+12   0   0   0   0
+13   0   0   0   0
+14   0   0   0   0
+15   0   0   0   0
+16   0   0   0   0
+17   0   0   0   0
+18   0   0   0   0
+19   0   0   0   0
+20   0   0   0   0
+21   0   0   0   0
+22   0   0   0   0
+23   0   0   0   0
+24   0   0   0   0
+25   0   0   0   0
+;
+
+ampl: reset;
+ampl: model ADD5.mod;
+ampl: data project2.dat;
+ampl: option solver cplex;
+ampl: solve;
+CPLEX 12.9.0.0: The license for this version of CPLEX will expire in 11.9 days.
+optimal solution; objective 29717780.75
+52 dual simplex iterations (0 in phase I)
+ampl: display _solve_elapsed_time;
+_solve_elapsed_time = 0.031
+
+ampl: display fp, fw;
+fp [*] :=
+ 1 1    4 1    7 0   10 0   13 0   16 0   19 0   22 0   25 0
+ 2 1    5 0    8 0   11 0   14 0   17 0   20 0   23 0
+ 3 1    6 0    9 0   12 0   15 0   18 0   21 0   24 0
+;
+
+fw [*,*]
+:    1   2   3   4    :=
+1    0   0   0   0
+2    0   0   0   0
+3    0   0   0   0
+4    0   0   0   0
+5    0   0   0   0
+6    0   0   0   0
+7    0   0   0   0
+8    0   0   0   0
+9    0   0   0   0
+10   0   0   0   0
+11   0   0   0   0
+12   0   0   0   0
+13   0   0   0   0
+14   0   0   0   0
+15   0   0   0   0
+16   0   0   0   0
+17   0   0   0   0
+18   0   0   0   0
+19   0   0   0   0
+20   0   0   0   0
+21   0   0   0   0
+22   0   0   0   0
+23   0   0   0   0
+24   0   0   0   0
+25   1   1   1   1
+;
+
+ampl: reset;
+ampl: model ADD6.mod;
+ampl: data project2.dat;
+ampl: option solver cplex;
+ampl: solve;
+CPLEX 12.9.0.0: The license for this version of CPLEX will expire in 11.9 days.
+optimal solution; objective 29245141.16
+71 dual simplex iterations (0 in phase I)
+ampl: display _solve_elapsed_time;
+_solve_elapsed_time = 0.047
+
+ampl: display fp, fw;
+fp [*] :=
+ 1 1    4 1    7 0   10 0   13 0   16 0   19 0   22 0   25 0
+ 2 1    5 0    8 0   11 0   14 0   17 0   20 0   23 0
+ 3 1    6 0    9 0   12 0   15 0   18 0   21 0   24 0
+;
+
+fw [*,*]
+:    1   2   3   4    :=
+1    0   0   0   0
+2    0   0   0   0
+3    0   0   0   0
+4    0   0   0   0
+5    0   0   0   0
+6    0   0   0   0
+7    0   0   0   0
+8    0   0   0   0
+9    0   0   0   0
+10   0   0   0   0
+11   0   0   0   0
+12   0   0   0   0
+13   0   0   0   0
+14   0   0   0   0
+15   0   0   0   0
+16   0   0   0   0
+17   0   0   0   0
+18   0   0   0   0
+19   0   0   0   0
+20   0   0   0   0
+21   0   0   0   0
+22   0   0   0   0
+23   0   0   0   0
+24   1   1   1   1
+25   1   1   1   1
+;
+
+ampl: reset;
+ampl: model ADD7.mod;
+ampl: data project2.dat;
+ampl: option solver cplex;
+ampl: solve;
+CPLEX 12.9.0.0: The license for this version of CPLEX will expire in 11.9 days.
+optimal solution; objective 28766379.01
+110 dual simplex iterations (0 in phase I)
+ampl: display _solve_elapsed_time;
+_solve_elapsed_time = 0.016
+
+ampl: display fp, fw;
+fp [*] :=
+ 1 1    4 1    7 0   10 0   13 0   16 0   19 0   22 0   25 0
+ 2 1    5 0    8 0   11 0   14 0   17 0   20 0   23 0
+ 3 1    6 0    9 0   12 0   15 0   18 0   21 0   24 0
+;
+
+fw [*,*]
+:    1   2   3   4    :=
+1    0   0   0   0
+2    0   0   0   0
+3    0   0   0   0
+4    0   0   0   0
+5    0   0   0   0
+6    0   0   0   0
+7    0   0   0   0
+8    0   0   0   0
+9    0   0   0   0
+10   0   0   0   0
+11   0   0   0   0
+12   0   0   0   0
+13   0   0   0   0
+14   0   0   0   0
+15   0   0   0   0
+16   0   0   0   0
+17   0   0   0   0
+18   0   0   0   0
+19   0   0   0   0
+20   0   0   0   0
+21   0   0   0   0
+22   0   0   0   0
+23   1   1   1   1
+24   1   1   1   1
+25   1   1   1   1
+;
+
+ampl: display {q in Q} sum{i in CITIES}D[i,q];
+sum{i in CITIES} D[i,q] [*] :=
+1  175723
+2  292872
+3  234298
+4  468596
+;
+
+ampl: display {q in Q} sum{i in CITIES}U[i,q];
+sum{i in CITIES} U[i,q] [*] :=
+1  2108680
+2  2108680
+3  1405790
+4  2249260
+;
+
+ampl: display {q in Q} sum{i in CITIES}xp[i,q];
+sum{i in CITIES} xp[i,q] [*] :=
+1  344329
+2  296901
+3  223167
+4  307092
+;
+
+ampl: display {q in Q} sum{i in CITIES}xw[i,q];
+sum{i in CITIES} xw[i,q] [*] :=
+1  168605
+2  172634
+3  161504
+4       0
+;
+
+ampl: display {q in Q} sum{i in CITIES,j in CITIES}ypi[i,j,q];
+sum{i in CITIES, j in CITIES} ypi[i,j,q] [*] :=
+1  175723
+2  124267
+3   86989.8
+4  307092
+;
+
+ampl: display {q in Q} sum{i in CITIES,j in CITIES}ypw[i,j,q];
+sum{i in CITIES, j in CITIES} ypw[i,j,q] [*] :=
+1  168605
+2  172634
+3  136177
+4       0
+;
+
+ampl: display {q in Q} sum{i in CITIES,j in CITIES}ywi[i,j,q];
+sum{i in CITIES, j in CITIES} ywi[i,j,q] [*] :=
+1       0
+2  168605
+3  147308
+4  161504
+;
+
+ampl: 
+ampl: 
