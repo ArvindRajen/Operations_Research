@@ -1,0 +1,108 @@
+ampl: model project2.mod;
+ampl: data project2.dat;
+ampl: option solver cplex;
+ampl: solve;
+CPLEX 12.9.0.0: The license for this version of CPLEX will expire in 12.0 days.
+CPLEX solution status 5 with fixed integers:
+	optimal with unscaled infeasibilities
+optimal integer solution within mipgap or absmipgap; objective 15102762.94
+31697 MIP simplex iterations
+285 branch-and-bound nodes
+absmipgap = 1190.11, relmipgap = 7.88008e-05
+ampl: display _solve_elapsed_time;
+_solve_elapsed_time = 7.953
+
+ampl: display fp, fw;
+fp [*] :=
+ 1 0    4 0    7 0   10 0   13 1   16 0   19 1   22 0   25 0
+ 2 0    5 0    8 0   11 0   14 0   17 0   20 0   23 0
+ 3 1    6 0    9 0   12 0   15 0   18 0   21 0   24 1
+;
+
+fw [*,*]
+:    1   2   3   4    :=
+1    0   0   0   1
+2    0   0   0   1
+3    0   0   0   0
+4    0   0   0   0
+5    0   0   0   0
+6    0   0   0   0
+7    0   0   0   0
+8    0   0   0   0
+9    0   0   0   0
+10   0   0   0   0
+11   1   0   0   0
+12   0   0   0   0
+13   0   0   0   0
+14   0   0   0   0
+15   0   0   0   0
+16   0   0   0   0
+17   0   0   0   0
+18   0   0   0   1
+19   0   0   0   0
+20   0   0   0   0
+21   0   0   0   0
+22   1   1   1   0
+23   0   1   1   0
+24   0   0   0   0
+25   1   1   1   0
+;
+
+ampl: display {q in Q} sum{i in CITIES}D[i,q];
+sum{i in CITIES} D[i,q] [*] :=
+1  175723
+2  292872
+3  234298
+4  468596
+;
+
+ampl: display {q in Q} sum{i in CITIES}U[i,q];
+sum{i in CITIES} U[i,q] [*] :=
+1  2108680
+2  2108680
+3  1405790
+4  2249260
+;
+
+ampl: display {q in Q} sum{i in CITIES}xp[i,q];
+sum{i in CITIES} xp[i,q] [*] :=
+1  284699
+2  320784
+3  223521
+4  342485
+;
+
+ampl: display {q in Q} sum{i in CITIES}xw[i,q];
+sum{i in CITIES} xw[i,q] [*] :=
+1  108976
+2  136888
+3  126110
+4       0
+;
+
+ampl: display {q in Q} sum{i in CITIES, j in CITIES}ypi[i,j,q];
+sum{i in CITIES, j in CITIES} ypi[i,j,q] [*] :=
+1  175723
+2  197017
+3  142137
+4  342485
+;
+
+ampl: display {q in Q} sum{i in CITIES, j in CITIES}ypw[i,j,q];
+sum{i in CITIES, j in CITIES} ypw[i,j,q] [*] :=
+1  108976
+2  123767
+3   81383.7
+4       0
+;
+
+ampl: display {q in Q} sum{i in CITIES, j in CITIES}ywi[i,j,q];
+sum{i in CITIES, j in CITIES} ywi[i,j,q] [*] :=
+1       0
+2   95855.6
+3   92160.8
+4  126110
+;
+
+ampl: 
+ampl: 
